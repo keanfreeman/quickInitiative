@@ -41,16 +41,16 @@ footer {
 	font-size: 1em;
 }
 
-.wrapper {
+.footerBlock {
 	vertical-align: middle;
 }
 
-.wrapper > a {
+.footerBlock > a {
 	text-decoration: none;
 	color: red;
 }
 
-.wrapper > .normalButton {
+.footerBlock > .normalButton {
 	margin-left: 20%;
 	margin-top: .5em;
 	font-size: 1.5em;
@@ -108,7 +108,8 @@ td .normalButton:hover {
 	border: 1px solid black;
 }
 
-.adderButtonBlock > .normalButton:hover {
+.footerBlock button:hover, .tooltip:hover, 
+	.adderButtonBlock > .normalButton:hover {
 	box-shadow: 0px 0px 10px 2px #2700fd;
 	transition: 250ms;
 }

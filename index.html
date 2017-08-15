@@ -18,22 +18,15 @@
 	<body data-ng-app="InitiativeApp">
 		<div class="header">
 			<h1>Quick Initiative</h1>
-				<!-- TODO: 
-				-ask for critique
-				-add contact info
-				-add a "what is this?" button/section that mentions pathfinder, 
-				dnd, roleplaying games, etc
-				-reorganize which containers text is in
-				-buy domain name
-				-buy web hosting
-				-->
-				<button class="normalButton tooltip" data-ng-click="showTooltip = !showTooltip">
-				What Is This?</button>
-				<span data-ng-cloak class="tooltiptext" data-ng-show="showTooltip">This is a web tool designed for 
-						helping groups play popular role-playing games like 
-						<a href="http://dnd.wizards.com/">Dungeons and Dragons</a>, 
-						and <a href="http://paizo.com/pathfinderRPG">Pathfinder</a>.
-				</span>
+
+			<button class="normalButton tooltip" data-ng-click="showTooltip = !showTooltip">
+			What Is This?</button>
+			
+			<span data-ng-cloak class="tooltiptext" data-ng-show="showTooltip">This is a web tool designed for 
+					helping groups play popular role-playing games like 
+					<a href="http://dnd.wizards.com/">Dungeons and Dragons</a>, 
+					and <a href="http://paizo.com/pathfinderRPG">Pathfinder</a>.
+			</span>
 		</div>
 		<div class="main" data-ng-controller="MainController">
 			<div class="controls">
@@ -83,7 +76,7 @@
 
 			<footer>
   				<div class="moreInfo">
-  					<div class="wrapper">
+  					<div class="footerBlock">
   						<a href="mailto:quickinitiativeapp@gmail.com">Email Me</a>
   						<br/>
   						<a href="https://github.com/keanfreeman">Project On Github</a>
@@ -93,7 +86,7 @@
   						<a href="https://ajax.googleapis.com">AngularJS</a>
   						<br/>
 					</div>
-  					<div class="wrapper">
+  					<div class="footerBlock">
   						<button class="normalButton" data-ng-click="showMoreInfo = !showMoreInfo"  
   							data-ng-init="showMoreInfo = false">More Information</button>
   					</div>
