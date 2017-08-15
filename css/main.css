@@ -70,7 +70,7 @@ footer {
 	margin-left: 4%;
 	margin-right: 4%;
 	display: table;
-	padding: .5em .5em .25em .5em;
+	padding: .5em 0em .25em 0em;
 }
 
 .controls > div {
@@ -80,6 +80,8 @@ footer {
 .adderButtonBlock, .initButtonBlock {
 	width: auto;
 	vertical-align: middle;
+	text-align: center;
+	text-align: -webkit-center;
 }
 
 .adderButtonBlock > .normalButton {
@@ -115,16 +117,19 @@ td .normalButton:hover {
 }
 
 .initiativeButton {
+	justify-content: center;
 	vertical-align: middle;
     background-color: white;
     border: 3px solid black;
     border-radius: 25%;
     color: black;
-    width: 5em;
     height: 3em;
     font-size: 3em;
     margin-left: 2em;
-    font-style: italic;
+	font-style: italic;
+
+	padding-right: .5em;
+	padding-left: .5em;
 
     box-shadow: 7px 7px #979797;
 }
