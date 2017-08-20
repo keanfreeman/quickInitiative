@@ -1,6 +1,6 @@
 # Quick Initiative
 A simple, mobile-friendly web application for rolling initiative in popular role-playing games. The website 
-lives at [QuickInitiative.us](quickinitiative.us) 
+lives at [QuickInitiative.us](http://quickinitiative.us) 
 
 While the functionality for this web app exists elsewhere, I wasn't satisfied with what was 
 available. All I needed was a tool that kept track of initiative order, but 
