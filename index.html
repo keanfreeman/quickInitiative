@@ -67,7 +67,8 @@
 					'monsterClass': creature.category === 'monster'}">
 
 					<td>
-						<input class="textInput" type="text" data-ng-model="creature.name"/>
+						<input class="textInput" type="text" data-ng-model="creature.name" 
+							data-select-on-click/>
 					</td>
 					<td>
 						<button class="clearButton" data-ng-click="creature.name = ''">&times;</button>
@@ -132,6 +133,7 @@
 		<script src="js/controllers/MainController.js"></script>
 		
 		<!-- Directives -->
-		
+		<script src="js/directives/selectOnClick.js"></script>
+
 	</body>
 </html>
