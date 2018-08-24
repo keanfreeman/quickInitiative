@@ -71,18 +71,15 @@
 							data-select-on-click/>
 					</td>
 					<td>
-						<button class="clearButton" data-ng-click="creature.name = ''">&times;</button>
-					</td>
-					<td>
 						<input class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
 					</td>
 					<td>
-						<input class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
+						<input tabindex=-1 class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
 							data-ng-change="sortCreatures(creatures)" 
 							data-ng-model-options="{debounce:1000}"/>
 					</td>
 					<td class="buttonDetail">
-						<button class="normalButton" data-ng-click="removeCreature(creature)">Remove</button>
+						<button tabindex=-1 class="normalButton" data-ng-click="removeCreature(creature)">Remove</button>
 		  			</td>
 		  		</tr>
 		  	</table>

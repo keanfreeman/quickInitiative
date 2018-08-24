@@ -151,6 +151,11 @@ td .normalButton:hover {
 	outline: none;
 }
 
+.buttonDetail {
+	display: flex;
+	justify-content: center;
+}
+
 .buttonDetail .normalButton {
 	font-size: 2em;
 }
