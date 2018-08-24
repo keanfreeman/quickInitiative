@@ -67,11 +67,11 @@
 					'monsterClass': creature.category === 'monster'}">
 
 					<td>
-						<input class="textInput" type="text" data-ng-model="creature.name" 
+						<input tabindex={{$index+1}} class="textInput" type="text" data-ng-model="creature.name" 
 							data-select-on-click/>
 					</td>
 					<td>
-						<input class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
+						<input tabindex={{$index+creatures.length+1}} class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
 					</td>
 					<td>
 						<input tabindex=-1 class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
