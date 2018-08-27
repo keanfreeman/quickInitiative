@@ -216,7 +216,7 @@ tr:not(.heading) {
 /* COLORING FOR DIFFERENT CLASSES */
 
 .playerClass {
-	background-color: rgb(52,168,83);
+	background-color: #0c7bdc;
 }
 
 .npcClass {
@@ -224,7 +224,7 @@ tr:not(.heading) {
 }
 
 .monsterClass {
-	background-color: rgb(234,67,53);
+	background-color: #FFC20a;
 }
 
 /*TOOLTIP*/
