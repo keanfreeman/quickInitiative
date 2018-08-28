@@ -52,38 +52,37 @@
 				</div>
 			</div>
 
-			<table class="creatureBlock" >
-				<tr class="heading">
-					<th>Name</th>
-					<!-- two empty th's for correct spacing -->
-					<th></th>
-					<th>Initiative Modifier</th>
-					<th>Rolled Initiative</th>
-					<th></th>
-				</tr>
-				<tr data-ng-repeat="creature in creatures" data-ng-class="{
-					'playerClass': creature.category === 'player', 
-					'npcClass': creature.category === 'npc', 
-					'monsterClass': creature.category === 'monster'}">
+			<div class="creatureBlock">
+				<div class="heading row">
+					<div>Name</div>
+					<!-- two empty div's for correct spacing -->
+					<div>Initiative Modifier</div>
+					<div>Rolled Initiative</div>
+					<div></div>
+				</div>
+				<div data-ng-repeat="creature in creatures" data-ng-class="{
+					'playerClass row': creature.category === 'player', 
+					'npcClass row': creature.category === 'npc', 
+					'monsterClass row': creature.category === 'monster'}">
 
-					<td>
+					<div class="detail">
 						<input tabindex={{$index+1}} class="textInput" type="text" data-ng-model="creature.name" 
 							data-select-on-click/>
-					</td>
-					<td>
+					</div>
+					<div class="detail">
 						<input tabindex={{$index+creatures.length+1}} class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
-					</td>
-					<td>
+					</div>
+					<div class="detail">
 						<input tabindex=-1 class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
 							data-ng-change="sortCreatures(creatures)" 
 							data-ng-model-options="{debounce:1000}"/>
-					</td>
-					<td class="buttonDetail">
+					</div>
+					<div class="detail" id="buttonDetail">
 						<button tabindex=-1 class="normalButton" data-ng-click="removeCreature(creature)">Remove</button>
-		  			</td>
-		  		</tr>
-		  	</table>
-
+		  			</div>
+		  		</div>
+			</div>
+			
 			<footer>
   				<div class="moreInfo">
   					<div class="footerBlock">
