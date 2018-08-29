@@ -13,7 +13,7 @@ html, body {
 	margin-left: 2em;
 	margin-bottom: 0em;
 	margin-right: 2em;
-
+  
 	display: flex;
 	justify-content: space-between;
 }
@@ -23,9 +23,6 @@ html, body {
 	font-weight: bold;
 	font-family: Garamond;
 	display: inline;
-
-	margin-bottom: 0;
-	margin-top: 0;
 }
 
 .header .brand {
@@ -38,8 +35,6 @@ html, body {
 	margin-top: 5px;
 	margin-right: 5px;
 }
-
-
 
 /* FOOTER SECTION */
 footer {
@@ -63,7 +58,7 @@ footer {
 	vertical-align: middle;
 }
 
-.footerBlock a {
+.footerBlock > a {
 	text-decoration: none;
 	color: red;
 }
@@ -122,7 +117,7 @@ footer {
 	border-radius: 2px;
 }
 
-td .normalButton:hover {
+.detail .normalButton:hover {
 	background: rgb(255,80,80);
 	transition: background 250ms;
 	border: 1px solid black;
@@ -169,12 +164,12 @@ td .normalButton:hover {
 	outline: none;
 }
 
-.buttonDetail {
+#buttonDetail {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 }
 
-.buttonDetail .normalButton {
+#buttonDetail .normalButton {
 	font-size: 2em;
 }
 
@@ -193,25 +188,9 @@ td .normalButton:hover {
 
 /* TABLE STUFF */
 .creatureBlock {
-	border-collapse: separate;
-	border-spacing: 0 1em;
 	margin-left: 1%;
 	margin-right: 1%;
-	width: 98%;
-}
-
-tr > td {
-	padding: 5px;
-}
-
-/* Increases the size of input fields */
-td > input {
-	font-size: 20px;
-	font-weight: 900;
-	height: 2em;
-	border: 2px solid black;
-	width: 50%;
-	text-align: center;
+	margin-top: 2%; 
 }
 
 .textInput {
@@ -219,11 +198,42 @@ td > input {
 }
 
 .numInput {
-	margin-left: 25%;
+	width: 50%;
 }
 
-tr:not(.heading) {
-	outline: solid;
+.heading div {
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.75%;
+}
+
+.detail {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.row > .detail {
+	padding: 5px;
+}
+
+/* Increases the size of input fields */
+.detail > input {
+	font-size: 20px;
+	font-weight: 900;
+	height: 2em;
+	border: 2px solid black;
+	text-align: center;
+}
+
+.row:not(.heading) {
+	border: 2px solid black;
 }
 
 .heading {
