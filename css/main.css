@@ -1,140 +1,140 @@
 html, body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .main {
-	font-family: Garamond;
-	font-size: 1em;
+    font-family: Garamond;
+    font-size: 1em;
 }
 
 .header {
-	margin-top: .25em;
-	margin-left: 2em;
-	margin-bottom: 0em;
-	margin-right: 2em;
+    margin-top: .25em;
+    margin-left: 2em;
+    margin-bottom: 0em;
+    margin-right: 2em;
   
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header h1 {
-	font-size: 3em;
-	font-weight: bold;
-	font-family: Garamond;
-	display: inline;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: Garamond;
+    display: inline;
 
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .header .brand {
-	display: flex;
+    display: flex;
 }
 
 .brand img {
-	width: 50px;
-	height: 50px;
-	margin-top: 5px;
-	margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 /* FOOTER SECTION */
 footer {
-	margin-top: 0em;
-	border-top: 2px dotted black;
+    margin-top: 0em;
+    border-top: 2px dotted black;
 }
 .moreInfo {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .moreInfo > div, p {
-	display: table-cell;
-	width: auto;
-	padding: 1em 1em 1em 1em;
-	font-size: 1em;
+    display: table-cell;
+    width: auto;
+    padding: 1em 1em 1em 1em;
+    font-size: 1em;
 }
 
 .footerBlock {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .footerBlock a {
-	text-decoration: none;
-	color: red;
+    text-decoration: none;
+    color: red;
 }
 
 .footerBlock > .normalButton {
-	margin-left: 20%;
-	margin-top: .5em;
-	font-size: 1.5em;
+    margin-left: 20%;
+    margin-top: .5em;
+    font-size: 1.5em;
 }
 
 .forceShow {
-	display: table-cell !important;
-	font-size: 2em;
+    display: table-cell !important;
+    font-size: 2em;
 }
 
 .forceHide {
-	display: none !important;
+    display: none !important;
 }
 
 /*CONTROLS SECTION*/
 .controls {
-	margin-left: 4%;
-	margin-right: 4%;
-	display: table;
-	padding: .5em 0em .25em 0em;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: table;
+    padding: .5em 0em .25em 0em;
 }
 
 .controls > div {
-	display:table-cell;
+    display:table-cell;
 }
 
 .adderButtonBlock, .initButtonBlock {
-	width: auto;
-	vertical-align: middle;
-	text-align: center;
-	text-align: -webkit-center;
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+    text-align: -webkit-center;
 }
 
 .adderButtonBlock > .normalButton {
-	display: block;
-	vertical-align: top;
-	margin:auto;
-	margin-bottom: .2em;
-	border: 2px solid black;
-	padding: 0em .5em 0em .5em;
+    display: block;
+    vertical-align: top;
+    margin:auto;
+    margin-bottom: .2em;
+    border: 2px solid black;
+    padding: 0em .5em 0em .5em;
 }
 
 /* BUTTONS */
 .normalButton {
-	background: white;
-	color: #000;
-	border: 1px solid black;
-	font-size: 2em;
-	font-weight: 200;
-	padding: 4px 20px;
-	border-radius: 2px;
+    background: white;
+    color: #000;
+    border: 1px solid black;
+    font-size: 2em;
+    font-weight: 200;
+    padding: 4px 20px;
+    border-radius: 2px;
 }
 
 .detail .normalButton:hover {
-	background: rgb(255,80,80);
-	transition: background 250ms;
-	border: 1px solid black;
+    background: rgb(255,80,80);
+    transition: background 250ms;
+    border: 1px solid black;
 }
 
 .footerBlock button:hover, .tooltip:hover, 
-	.adderButtonBlock > .normalButton:hover {
-	box-shadow: 0px 0px 10px 2px #2700fd;
-	transition: 250ms;
+    .adderButtonBlock > .normalButton:hover {
+    box-shadow: 0px 0px 10px 2px #2700fd;
+    transition: 250ms;
 }
 
 .initiativeButton {
-	justify-content: center;
-	vertical-align: middle;
+    justify-content: center;
+    vertical-align: middle;
     background-color: white;
     border: 3px solid black;
     border-radius: 25%;
@@ -142,19 +142,19 @@ footer {
     height: 3em;
     font-size: 3em;
     margin-left: 2em;
-	font-style: italic;
+    font-style: italic;
 
-	padding-right: .5em;
-	padding-left: .5em;
+    padding-right: .5em;
+    padding-left: .5em;
 
     box-shadow: 7px 7px #979797;
 }
 
 .initiativeButton:hover {
-	background: black;
-	color: white;
-	transition: background 500ms;
-	font-style: italic;
+    background: black;
+    color: white;
+    transition: background 500ms;
+    font-style: italic;
 }
 
 .initiativeButton:active {
@@ -164,122 +164,122 @@ footer {
 }
 
 .initiativeButton:focus {
-	outline: none;
+    outline: none;
 }
 
 #buttonDetail {
-	display: flex;
-	justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #buttonDetail .normalButton {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 .clearButton {
-	border-radius: 100%;
-	border: none;
-	width: 1.5em;
-	height: 1.5em;
-	text-align: center;
-	vertical-align: middle;
-	padding: 0px 0px 0px 0px;
-	background-color: gray;
-	font-size: 1em;
-	color: white;
+    border-radius: 100%;
+    border: none;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px 0px 0px 0px;
+    background-color: gray;
+    font-size: 1em;
+    color: white;
 }
 
 /* TABLE STUFF */
 .creatureBlock {
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-top: 2%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%; 
 }
 
 .textInput {
-	width: 100%;
+    width: 100%;
 }
 
 .numInput {
-	width: 50%;
+    width: 50%;
 }
 
 .heading div {
-	font-weight: bold;
-	width: 100%;
-	text-align: center;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
 }
 
 .row {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0.75%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75%;
 }
 
 .detail {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .row > .detail {
-	padding: 5px;
+    padding: 5px;
 }
 
 /* Increases the size of input fields */
 .detail > input {
-	font-size: 20px;
-	font-weight: 900;
-	height: 2em;
-	border: 2px solid black;
-	text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    height: 2em;
+    border: 2px solid black;
+    text-align: center;
 }
 
 .row:not(.heading) {
-	border: 2px solid black;
+    border: 2px solid black;
 }
 
 .heading {
-	border-bottom: 0px;
-	font-size: 140%
+    border-bottom: 0px;
+    font-size: 140%
 }
 
 /* COLORING FOR DIFFERENT CLASSES */
 
 .playerClass {
-	background-color: #0c7bdc;
+    background-color: #0c7bdc;
 }
 
 .npcClass {
-	background-color: white;
+    background-color: white;
 }
 
 .monsterClass {
-	background-color: #FFC20a;
+    background-color: #FFC20a;
 }
 
 /*TOOLTIP*/
 .tooltip {
-	float: right;
-	font-size: 1.25em;
-	margin-top: .5em;
+    float: right;
+    font-size: 1.25em;
+    margin-top: .5em;
 }
 
 .tooltiptext {
-	width: 5em;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	padding: .5em;
-	border-radius: .5em;
- 	
- 	font-size: 1.75em;
-	position: absolute;
-	z-index: 1;
-	right: 1.2em;
-	top: 2em;
+    width: 5em;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: .5em;
+    border-radius: .5em;
+    
+    font-size: 1.75em;
+    position: absolute;
+    z-index: 1;
+    right: 1.2em;
+    top: 2em;
 }
 .tooltiptext a {
-	text-decoration: none;
-	color: red;
+    text-decoration: none;
+    color: red;
 }

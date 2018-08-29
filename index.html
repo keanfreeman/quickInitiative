@@ -1,137 +1,137 @@
 <!doctype html>
 <html>
-	<head>
-		<link href="css/main.css" rel="stylesheet" />
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<meta charset="UTF-8"/>
-		<meta name="description" content="Quick Initiative is an initiative tracker for 
-			popular roleplaying games like Dungeons and Dragons and Pathfinder. It is 
-			mobile-friendly, open-source, and intentionally simple. "/>
-		<title>Quick Initiative</title>
-	
-		<!-- include AngularJS -->
-		<!--<script src="js/angular.js"></script>-->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-		<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>-->
+    <head>
+        <link href="css/main.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Quick Initiative is an initiative tracker for 
+            popular roleplaying games like Dungeons and Dragons and Pathfinder. It is 
+            mobile-friendly, open-source, and intentionally simple. "/>
+        <title>Quick Initiative</title>
+    
+        <!-- include AngularJS -->
+        <!--<script src="js/angular.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>-->
 
-		<!-- Google Analytics -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			
-			ga('create', 'UA-104920521-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-	</head>
-	
-	<body data-ng-app="InitiativeApp">
-		<div class="header">
-			<div class="brand">
-				<img src="images/ray1.svg" alt="A blue and yellow lightning bolt." >
-				<h1>Quick Initiative</h1>
-			</div>
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-104920521-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    
+    <body data-ng-app="InitiativeApp">
+        <div class="header">
+            <div class="brand">
+                <img src="images/ray1.svg" alt="A blue and yellow lightning bolt." >
+                <h1>Quick Initiative</h1>
+            </div>
 
-			<button class="normalButton tooltip" data-ng-click="showTooltip = !showTooltip">
-			What Is This?</button>
+            <button class="normalButton tooltip" data-ng-click="showTooltip = !showTooltip">
+            What Is This?</button>
 
-			<span data-ng-cloak class="tooltiptext" data-ng-show="showTooltip">This is a web tool designed for 
-					helping groups play popular role-playing games like 
-					<a href="http://dnd.wizards.com/">Dungeons and Dragons</a>, 
-					and <a href="http://paizo.com/pathfinderRPG">Pathfinder</a>.
-			</span>
-		</div>
-		<div class="main" data-ng-controller="MainController">
-			<div class="controls">
-				<div class="adderButtonBlock"> 
-					<button class="normalButton playerClass" data-ng-click="addNew('Player')">Add Player</button>
-		  			<button class="normalButton npcClass" data-ng-click="addNew('NPC')">Add NPC</button>
-					<button class="normalButton monsterClass" data-ng-click="addNew('Monster')">Add Monster</button>
-				</div>
-				<div class="initButtonBlock"> 
-					<!-- Newline character in button due to Safari not displaying text centered properly -->
-					<button class="initiativeButton" data-ng-click="rollInitiative()">Roll <br/> Initiative!</button>
-				</div>
-			</div>
+            <span data-ng-cloak class="tooltiptext" data-ng-show="showTooltip">This is a web tool designed for 
+                    helping groups play popular role-playing games like 
+                    <a href="http://dnd.wizards.com/">Dungeons and Dragons</a>, 
+                    and <a href="http://paizo.com/pathfinderRPG">Pathfinder</a>.
+            </span>
+        </div>
+        <div class="main" data-ng-controller="MainController">
+            <div class="controls">
+                <div class="adderButtonBlock"> 
+                    <button class="normalButton playerClass" data-ng-click="addNew('Player')">Add Player</button>
+                    <button class="normalButton npcClass" data-ng-click="addNew('NPC')">Add NPC</button>
+                    <button class="normalButton monsterClass" data-ng-click="addNew('Monster')">Add Monster</button>
+                </div>
+                <div class="initButtonBlock"> 
+                    <!-- Newline character in button due to Safari not displaying text centered properly -->
+                    <button class="initiativeButton" data-ng-click="rollInitiative()">Roll <br/> Initiative!</button>
+                </div>
+            </div>
 
-			<div class="creatureBlock">
-				<div class="heading row">
-					<div>Name</div>
-					<!-- two empty div's for correct spacing -->
-					<div>Initiative Modifier</div>
-					<div>Rolled Initiative</div>
-					<div></div>
-				</div>
-				<div data-ng-repeat="creature in creatures" data-ng-class="{
-					'playerClass row': creature.category === 'player', 
-					'npcClass row': creature.category === 'npc', 
-					'monsterClass row': creature.category === 'monster'}">
+            <div class="creatureBlock">
+                <div class="heading row">
+                    <div>Name</div>
+                    <!-- two empty div's for correct spacing -->
+                    <div>Initiative Modifier</div>
+                    <div>Rolled Initiative</div>
+                    <div></div>
+                </div>
+                <div data-ng-repeat="creature in creatures" data-ng-class="{
+                    'playerClass row': creature.category === 'player', 
+                    'npcClass row': creature.category === 'npc', 
+                    'monsterClass row': creature.category === 'monster'}">
 
-					<div class="detail">
-						<input tabindex={{$index+1}} class="textInput" type="text" data-ng-model="creature.name" 
-							data-select-on-click/>
-					</div>
-					<div class="detail">
-						<input tabindex={{$index+creatures.length+1}} class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
-					</div>
-					<div class="detail">
-						<input tabindex=-1 class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
-							data-ng-change="sortCreatures(creatures)" 
-							data-ng-model-options="{debounce:1000}"/>
-					</div>
-					<div class="detail" id="buttonDetail">
-						<button tabindex=-1 class="normalButton" data-ng-click="removeCreature(creature)">Remove</button>
-		  			</div>
-		  		</div>
-			</div>
-			
-			<footer>
-  				<div class="moreInfo">
-  					<div class="footerBlock">
-  						<a href="https://github.com/keanfreeman/quickInitiative">Project On Github</a>
-  						<br/>
-  						<a href="https://www.freefavicon.com/">Favicon Source</a>
-  						<br/>
-  						<div>
-  							Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-  						</div>
-					</div>
-  					<div class="footerBlock">
-  						<button class="normalButton" data-ng-click="showMoreInfo = !showMoreInfo"  
-  							data-ng-init="showMoreInfo = false">More Information</button>
-  					</div>
-				</div>
-				<p style="display: none;" data-ng-class='{forceShow: showMoreInfo}'>
-						&emsp;Thank you for using my web app! My name is Kean, and I built 
-						this tool for groups that could use a tool to speed up rolling 
-						initiative, but don't need it to be overly complicated.
-						<br/>
-						Some tips:
-						<br/>
-						1. You can manually change rolled values on the fly - the list will 
-						reorder itself.
-						<br/>
-						2. This tool makes rerolling initiative every round very quick and 
-						simple, if you'd like to add some variety to your initiative count.
-						<br/>
-						3. You can have a player handle the initiative instead so the 
-						Game Master has less to worry about.
-						<br/>
-						4. This project is open source; if you think this tool could be better, 
-						make a change!
-				</p>
-	  	</footer>
-		</div>
+                    <div class="detail">
+                        <input tabindex={{$index+1}} class="textInput" type="text" data-ng-model="creature.name" 
+                            data-select-on-click/>
+                    </div>
+                    <div class="detail">
+                        <input tabindex={{$index+creatures.length+1}} class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
+                    </div>
+                    <div class="detail">
+                        <input tabindex=-1 class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
+                            data-ng-change="sortCreatures(creatures)" 
+                            data-ng-model-options="{debounce:1000}"/>
+                    </div>
+                    <div class="detail" id="buttonDetail">
+                        <button tabindex=-1 class="normalButton" data-ng-click="removeCreature(creature)">Remove</button>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <div class="moreInfo">
+                    <div class="footerBlock">
+                        <a href="https://github.com/keanfreeman/quickInitiative">Project On Github</a>
+                        <br/>
+                        <a href="https://www.freefavicon.com/">Favicon Source</a>
+                        <br/>
+                        <div>
+                            Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                        </div>
+                    </div>
+                    <div class="footerBlock">
+                        <button class="normalButton" data-ng-click="showMoreInfo = !showMoreInfo"  
+                            data-ng-init="showMoreInfo = false">More Information</button>
+                    </div>
+                </div>
+                <p style="display: none;" data-ng-class='{forceShow: showMoreInfo}'>
+                        &emsp;Thank you for using my web app! My name is Kean, and I built 
+                        this tool for groups that could use a tool to speed up rolling 
+                        initiative, but don't need it to be overly complicated.
+                        <br/>
+                        Some tips:
+                        <br/>
+                        1. You can manually change rolled values on the fly - the list will 
+                        reorder itself.
+                        <br/>
+                        2. This tool makes rerolling initiative every round very quick and 
+                        simple, if you'd like to add some variety to your initiative count.
+                        <br/>
+                        3. You can have a player handle the initiative instead so the 
+                        Game Master has less to worry about.
+                        <br/>
+                        4. This project is open source; if you think this tool could be better, 
+                        make a change!
+                </p>
+        </footer>
+        </div>
 
-		<!-- Modules -->
-		<script src="js/app.js"></script>
-		
-		<!-- Controllers -->
-		<script src="js/controllers/MainController.js"></script>
-		
-		<!-- Directives -->
-		<script src="js/directives/selectOnClick.js"></script>
+        <!-- Modules -->
+        <script src="js/app.js"></script>
+        
+        <!-- Controllers -->
+        <script src="js/controllers/MainController.js"></script>
+        
+        <!-- Directives -->
+        <script src="js/directives/selectOnClick.js"></script>
 
-	</body>
+    </body>
 </html>
