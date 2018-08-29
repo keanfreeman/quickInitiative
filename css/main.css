@@ -23,6 +23,9 @@ html, body {
 	font-weight: bold;
 	font-family: Garamond;
 	display: inline;
+
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .header .brand {
@@ -58,7 +61,7 @@ footer {
 	vertical-align: middle;
 }
 
-.footerBlock > a {
+.footerBlock a {
 	text-decoration: none;
 	color: red;
 }
