@@ -13,15 +13,28 @@ html, body {
 	margin-left: 2em;
 	margin-bottom: 0em;
 	margin-right: 2em;
+  
+	display: flex;
+	justify-content: space-between;
 }
 
-.header > h1 {
+.header h1 {
 	font-size: 3em;
 	font-weight: bold;
 	font-family: Garamond;
 	display: inline;
 }
 
+.header .brand {
+	display: flex;
+}
+
+.brand img {
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
 
 /* FOOTER SECTION */
 footer {

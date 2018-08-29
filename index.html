@@ -28,7 +28,10 @@
 	
 	<body data-ng-app="InitiativeApp">
 		<div class="header">
-			<h1>Quick Initiative</h1>
+			<div class="brand">
+				<img src="images/ray1.svg" alt="A blue and yellow lightning bolt." >
+				<h1>Quick Initiative</h1>
+			</div>
 
 			<button class="normalButton tooltip" data-ng-click="showTooltip = !showTooltip">
 			What Is This?</button>
@@ -86,14 +89,13 @@
 			<footer>
   				<div class="moreInfo">
   					<div class="footerBlock">
-  						<a href="mailto:quickinitiativeapp@gmail.com">Email Me</a>
-  						<br/>
   						<a href="https://github.com/keanfreeman/quickInitiative">Project On Github</a>
   						<br/>
   						<a href="https://www.freefavicon.com/">Favicon Source</a>
   						<br/>
-  						<a href="https://ajax.googleapis.com">AngularJS</a>
-  						<br/>
+  						<div>
+  							Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+  						</div>
 					</div>
   					<div class="footerBlock">
   						<button class="normalButton" data-ng-click="showMoreInfo = !showMoreInfo"  
