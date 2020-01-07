@@ -22,7 +22,6 @@ app.controller('MainController', ['$scope', function($scope) {
 	$scope.showTooltip = false;
 
 	//FUNCTIONS
-
 	$scope.addNew = function(typeIn) {
 		//Makes sure that added name has a proper number
 		var newName = "";
@@ -50,7 +49,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	//Returns number between 1 and 20, as though rolling 1d20. Using 
 	//window.crypto because Math.random() seed may not have 
 	//been random enough
-	$scope.roll1D20 = function() {
+	function roll1D20() {
 		var array = new Uint32Array(1);
 		window.crypto.getRandomValues(array);
 		return 1 + (array[0] % 20); 
@@ -66,7 +65,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	//Roll initiative, then reorder the creatures by their rolled value
 	$scope.rollInitiative = function() {
 		for (var i = 0; i < $scope.creatures.length; i++) {
-			var d20 = $scope.roll1D20();
+			var d20 = roll1D20();
 			$scope.creatures[i].rolledInitiative = 
 			d20 + $scope.creatures[i].initiativeModifier;
 		}
