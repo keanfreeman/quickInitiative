@@ -13,10 +13,10 @@ app.controller('MainController', ['$scope', function($scope) {
 			category: 'monster'
 		}
 	];
-
 	var numPlayers = 1;
 	var numNPCs = 0;
 	var numMonsters = 1;
+	retrieveLocalStorage();
 
 	$scope.showMoreInfo = false;
 	$scope.showTooltip = false;
@@ -44,6 +44,8 @@ app.controller('MainController', ['$scope', function($scope) {
 				rolledInitiative: 0,
 				category: typeIn.toLowerCase()
 		});
+
+		$scope.updateLocalStorage();
 	}
 
 	//Returns number between 1 and 20, as though rolling 1d20. Using 
@@ -70,6 +72,8 @@ app.controller('MainController', ['$scope', function($scope) {
 			d20 + $scope.creatures[i].initiativeModifier;
 		}
 		$scope.sortCreatures($scope.creatures);
+
+		$scope.updateLocalStorage();
 	}
 
 	//Removes the creature from the list and decriments the number of that 
@@ -86,5 +90,24 @@ app.controller('MainController', ['$scope', function($scope) {
 			numMonsters -= 1;
 		}
 		$scope.creatures.splice(index, 1);
+
+		$scope.updateLocalStorage();
+	}
+
+	// LOCALSTORAGE FUNCTIONS
+	$scope.updateLocalStorage = function() {
+		localStorage.setItem('creatures', angular.toJson($scope.creatures));
+		localStorage.setItem('counts', angular.toJson([numPlayers, numNPCs, numMonsters]));
+		
+	}
+
+	function retrieveLocalStorage() {
+		if (localStorage.getItem('creatures') !== null) {
+			$scope.creatures = JSON.parse(localStorage.getItem('creatures'));
+			var counts = JSON.parse(localStorage.getItem('counts'));
+			numPlayers = counts[0];
+			numNPCs = counts[1];
+			numMonsters = counts[2];
+		}
 	}
 }]);

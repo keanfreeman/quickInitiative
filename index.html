@@ -71,15 +71,18 @@
 
                     <div class="detail">
                         <input tabindex={{$index+1}} class="textInput" type="text" data-ng-model="creature.name" 
-                            data-select-on-click/>
+                            data-select-on-click ng-blur="updateLocalStorage()" />
                     </div>
                     <div class="detail">
-                        <input tabindex={{$index+creatures.length+1}} class="numInput" type="number" data-ng-model="creature.initiativeModifier" />
+                        <input tabindex={{$index+creatures.length+1}} class="numInput" type="number"
+                            data-ng-model="creature.initiativeModifier" ng-blur="updateLocalStorage()" />
                     </div>
                     <div class="detail">
                         <input tabindex=-1 class="numInput" type="number" data-ng-model="creature.rolledInitiative" 
                             data-ng-change="sortCreatures(creatures)" 
-                            data-ng-model-options="{debounce:1000}"/>
+                            data-ng-model-options="{debounce:1000}"
+                            ng-blur="updateLocalStorage()"
+                        />
                     </div>
                     <div class="detail" id="buttonDetail">
                         <button tabindex=-1 class="normalButton" data-ng-click="removeCreature(creature)">Remove</button>
