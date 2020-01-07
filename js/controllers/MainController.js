@@ -14,9 +14,9 @@ app.controller('MainController', ['$scope', function($scope) {
 		}
 	];
 
-	$scope.numPlayers = 1;
-	$scope.numNPCs = 0;
-	$scope.numMonsters = 1;
+	var numPlayers = 1;
+	var numNPCs = 0;
+	var numMonsters = 1;
 
 	$scope.showMoreInfo = false;
 	$scope.showTooltip = false;
@@ -27,16 +27,16 @@ app.controller('MainController', ['$scope', function($scope) {
 		//Makes sure that added name has a proper number
 		var newName = "";
 		if (typeIn === "Player") {
-			$scope.numPlayers += 1;
-			newName = typeIn + " #" + $scope.numPlayers.toString();
+			numPlayers += 1;
+			newName = typeIn + " #" + numPlayers.toString();
 		}
 		else if (typeIn === "NPC") {
-			$scope.numNPCs += 1;
-			newName = typeIn + " #" + $scope.numNPCs.toString();
+			numNPCs += 1;
+			newName = typeIn + " #" + numNPCs.toString();
 		}
 		else {
-			$scope.numMonsters += 1;
-			newName = typeIn + " #" + $scope.numMonsters.toString();
+			numMonsters += 1;
+			newName = typeIn + " #" + numMonsters.toString();
 		}
 
 		$scope.creatures.push({
@@ -78,13 +78,13 @@ app.controller('MainController', ['$scope', function($scope) {
 	$scope.removeCreature = function(creature) {
 		var index = $scope.creatures.indexOf(creature);
 		if (creature.category === "player") {
-			$scope.numPlayers -= 1;
+			numPlayers -= 1;
 		}
 		else if (creature.category === "npc") {
-			$scope.numNPCs -= 1;
+			numNPCs -= 1;
 		}
 		else {
-			$scope.numMonsters -= 1;
+			numMonsters -= 1;
 		}
 		$scope.creatures.splice(index, 1);
 	}
